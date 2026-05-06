@@ -1,3 +1,4 @@
+import { Span } from "next/dist/trace";
 import styles from "./Site.module.css";
 
 /* ====================================================
@@ -244,17 +245,17 @@ export function Application() {
    WHY CHOOSE PARYLENE
    ==================================================== */
 const BADGES_LEFT = [
-  { label: "Transparent and optically clear", icon: "/images/benefit-1.png" },
-  { label: "No thermal stress during application", icon: "/images/benefit-2.png" },
-  { label: "Biocompatible and environmentally friendly", icon: "/images/benefit-3.png" },
-  { label: "Free from pinholes and defects", icon: "/images/benefit-4.png" },
+  { label: "Transparent and optically clear", icon: "/images/benefit-1.svg" },
+  { label: "No thermal stress during application", icon: "/images/benefit-2.svg" },
+  { label: "Biocompatible and environmentally friendly", icon: "/images/benefit-3.svg" },
+  { label: "Free from pinholes and defects", icon: "/images/benefit-4.svg" },
 ];
 
 const BADGES_RIGHT = [
-  { label: "Completely conformal and uniform", icon: "/images/benefit-5.png" },
-  { label: "Ultra-thin and lightweight", icon: "/images/benefit-6.png" },
-  { label: "Moisture and chemical resistant", icon: "/images/benefit-7.png" },
-  { label: "High dielectric strength", icon: "/images/benefit-8.png" },
+  { label: "Completely conformal and uniform", icon: "/images/benefit-5.svg" },
+  { label: "Ultra-thin and lightweight", icon: "/images/benefit-6.svg" },
+  { label: "Moisture and chemical resistant", icon: "/images/benefit-7.svg" },
+  { label: "High dielectric strength", icon: "/images/benefit-8.svg" },
 ];
 
 export function WhyChooseParylene() {
@@ -330,6 +331,8 @@ const ADV_CARDS = [
       "Controlled thickness",
     ],
     side: "left",
+    path: "/images/ad1.png",
+    class:styles.card1
   },
   {
     title: "Barrier Protection",
@@ -338,21 +341,29 @@ const ADV_CARDS = [
       "Prevents gas permeability",
     ],
     side: "right",
+    path: "/images/ad2.png",
+    class:styles.card2
   },
   {
     title: "Electrical",
     items: ["Excellent insulation", "Anti-static properties"],
     side: "left",
+    path: "/images/ad3.png",
+    class:styles.card3
   },
   {
     title: "Mechanical",
     items: ["Smooth surface (dry lubrication)", "No stress during coating"],
     side: "right",
+    path: "/images/ad4.png",
+    class:styles.card4
   },
   {
     title: "Thermal",
     items: ["Withstands extreme temperatures"],
     side: "left",
+    path: "/images/ad5.png",
+    class:styles.card5
   },
 ];
 
@@ -362,7 +373,7 @@ export function Advantages() {
       <div className={styles.adBgWash} aria-hidden="true" />
 
       <div className={styles.adHeader}>
-        <span className={styles.adEyebrow}>ADVANTAGES</span>
+        <span className={styles.adEyebrow}>INDUSTRIES</span>
         <h2 className={styles.adSectionTitle}>Parylene Advantages</h2>
       </div>
 
@@ -374,24 +385,49 @@ export function Advantages() {
               card.side === "left" ? styles.adCardLeft : styles.adCardRight
             }`}
           >
-            <div className={styles.adCardImage}>
-              <img
-                src="/images/advantage.png"
-                alt={card.title}
-                className={styles.adCardImg}
-              />
-            </div>
-            <div className={styles.adBody}>
-              <h3 className={styles.adCardTitle}>{card.title}</h3>
-              <ul className={styles.adList}>
-                {card.items.map((it) => (
-                  <li key={it}>
-                    <span className={styles.adBullet} aria-hidden="true" />
-                    {it}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {card.side === "left" ? (
+              <>
+                <div className={styles.adCardImage}>
+                  <img
+                    src={card.path}
+                    alt={card.title}
+                    className={styles.adCardImg + " " + card.class}
+                  />
+                </div>
+                <div className={styles.adBody}>
+                  <h3 className={styles.adCardTitle}>{card.title}</h3>
+                  <ul className={styles.adList}>
+                    {card.items.map((it) => (
+                      <li key={it}>
+                        <span className={styles.adBullet} aria-hidden="true" />
+                        {it}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className={styles.adBody} style={{ textAlign: "right" }}>
+                  <h3 className={styles.adCardTitle}>{card.title}</h3>
+                  <ul className={styles.adList} style={{ alignItems: "flex-end" }}>
+                    {card.items.map((it) => (
+                      <li key={it} style={{ justifyContent: "flex-end" }}>
+                        {it}
+                        <span className={styles.adBullet} aria-hidden="true" />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className={styles.adCardImage} style={{ marginRight: 0, marginLeft: "28px" }}>
+                  <img
+                    src={card.path}
+                    alt={card.title}
+                    className={styles.adCardImg + " " + card.class}
+                  />
+                </div>
+              </>
+            )}
           </article>
         ))}
       </div>
@@ -477,12 +513,27 @@ export function Process() {
    FACILITY
    ==================================================== */
 const GALLERY = [
-  { src: "/images/facility-main.png", alt: "Main facility floor", cls: "large" },
-  { src: "/images/facility-1.png", alt: "Deposition chamber", cls: "sm" },
-  { src: "/images/facility-2.png", alt: "Quality control lab", cls: "sm" },
-  { src: "/images/facility-3.png", alt: "Component storage", cls: "sm" },
-  { src: "/images/facility-4.png", alt: "Facility exterior", cls: "sm" },
+  { src: "/images/facility-main.png", alt: "Clean Room Operations", label: "Clean Room Operations · Parylene Deposition Chamber" },
+  { src: "/images/facility-1.png", alt: "Industrial Coating Machine", label: "Industrial Coating Machine" },
+  { src: "/images/facility-2.png", alt: "Process Control Panel", label: "Process Control Panel" },
+  { src: "/images/facility-3.png", alt: "ESD-Safe Assembly Stations", label: "ESD-Safe Assembly Stations" },
+  { src: "/images/facility-4.png", alt: "PCB Pre-Coating Preparation", label: "PCB Pre-Coating Preparation" },
 ];
+
+const fcLabelStyle = {
+  position: "absolute",
+  bottom: 0,
+  left: 0,
+  right: 0,
+  padding: "24px 16px 14px",
+  background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 100%)",
+  color: "#fff",
+  fontSize: "14px",
+  fontWeight: 200,
+  letterSpacing: "0.3px",
+  lineHeight: 1.3,
+  fontFamily: "sans-serif",
+};
 
 export function Facility() {
   return (
@@ -493,17 +544,21 @@ export function Facility() {
       </div>
 
       <div className={styles.fcGallery}>
-        <div className={styles.fcGalleryMain}>
+        <div className={styles.fcGalleryMain} style={{ position: "relative" }}>
           <img
             src={GALLERY[0].src}
             alt={GALLERY[0].alt}
             className={styles.fcMainImg}
           />
+          <span style={fcLabelStyle}>{GALLERY[0].label}</span>
         </div>
         <div className={styles.fcGalleryGrid}>
           {GALLERY.slice(1).map((item, i) => (
-            <div key={i} className={styles.fcGridCell}>
+            <div key={i} className={styles.fcGridCell} style={{ position: "relative" }}>
               <img src={item.src} alt={item.alt} className={styles.fcGridImg} />
+              <span style={{ ...fcLabelStyle, fontSize: "13px", padding: "20px 12px 10px" }}>
+                {item.label}
+              </span>
             </div>
           ))}
         </div>
@@ -515,7 +570,7 @@ export function Facility() {
 /* ====================================================
    COMPARISON CHART
    ==================================================== */
-const COLUMNS = ["ACRYLIC", "URETHANE", "EPOXY", "SILICONE", "PARYLENE"];
+const COLUMNS = [{ label: "ACRYLIC", path:"/images/th1.png" }, { label: "URETHANE", path:"/images/th2.png" }, { label: "EPOXY", path:"/images/th3.png" }, { label: "SILICONE", path:"/images/th4.png" }, { label: "PARYLENE", path:"/images/th5.png" }];
 
 const ROWS = [
   ["Coating Quality", "Good", "Good", "Good", "Good", "Excellent"],
@@ -556,13 +611,35 @@ export function ComparisonChart() {
         <table className={styles.ccTable}>
           <thead>
             <tr>
-              <th className={styles.ccFactorHead}>Performance<br />Facotors</th>
+              <th className={styles.ccFactorHead}>Performance<br />Factors</th>
               {COLUMNS.map((c, i) => (
                 <th
-                  key={c}
+                  key={c.label}
                   className={i === 4 ? styles.ccHeadBest : styles.ccHead}
                 >
-                  {i===4?" ":c}
+                 <span
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    gap: "6px"
+  }}
+>
+  {i === 4 ? null : (
+    <>
+      <img
+        src={c.path}
+        alt={c.label}
+        style={{
+          width: "36px",
+          height: "36px",
+          objectFit: "contain"
+        }}
+      />
+      <span>{c.label}</span>
+    </>
+  )}
+</span>
                 </th>
               ))}
             </tr>
@@ -672,11 +749,7 @@ export function Footer() {
         <div className={styles.frAddresses}>
           <div className={styles.frAddressBlock}>
             <div className={styles.frAddressIcon}>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M2 20V8l10-6 10 6v12H2z"/>
-                <path d="M6 10v10M10 10v10M14 10v10M18 10v10"/>
-                <path d="M2 10h20"/>
-              </svg>
+             <img src="/images/foot-add.png" alt="" />
             </div>
             <div className={styles.frAddressBody}>
               <h3>FACTORY ADDRESS</h3>
@@ -693,10 +766,7 @@ export function Footer() {
 
           <div className={styles.frAddressBlock}>
             <div className={styles.frAddressIcon}>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="4" y="2" width="16" height="20" rx="2"/>
-                <path d="M9 22v-4h6v4M8 6h8M8 10h8M8 14h4"/>
-              </svg>
+              <img src="/images/foot-off.png" alt="" />
             </div>
             <div className={styles.frAddressBody}>
               <h3>CORPORATE OFFICE</h3>
@@ -716,9 +786,7 @@ export function Footer() {
 
           <div className={styles.frContactItem}>
             <div className={styles.frIconCircle}>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-              </svg>
+              <img src="/images/foot-phone.png" alt="" style={{width:"42px"}} />
             </div>
             <div className={styles.frContactText}>
               <span className={styles.frContactLabel}>PHONE</span>
@@ -730,10 +798,7 @@ export function Footer() {
 
           <div className={styles.frContactItem}>
             <div className={styles.frIconCircle}>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-              </svg>
+              <img src="/images/foot-web.png" alt="" style={{width:"42px"}} />
             </div>
             <div className={styles.frContactText}>
               <span className={styles.frContactLabel}>WEBSITE</span>
@@ -745,10 +810,7 @@ export function Footer() {
 
           <div className={styles.frContactItem}>
             <div className={styles.frIconCircle}>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="2" y="4" width="20" height="16" rx="2"/>
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-              </svg>
+              <img src="/images/foot-email.png" alt="" style={{width:"42px"}} />
             </div>
             <div className={styles.frContactText}>
               <span className={styles.frContactLabel}>EMAIL</span>
@@ -760,15 +822,10 @@ export function Footer() {
             <span className={styles.frFollowLabel}>Follow us</span>
             <div className={styles.frSocialIcons}>
               <a href="#" aria-label="LinkedIn" className={styles.frSocialIcon}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
+                <img src="/images/foot-linkedin.png" alt="" />
               </a>
               <a href="#" aria-label="Email" className={styles.frSocialIcon}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="4" width="20" height="16" rx="2"/>
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                </svg>
+                <img src="/images/foot-msg.png" alt="" />
               </a>
             </div>
           </div>
