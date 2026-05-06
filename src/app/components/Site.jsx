@@ -1,4 +1,5 @@
-import { Span } from "next/dist/trace";
+"use client";
+import { useState } from "react";
 import styles from "./Site.module.css";
 
 /* ====================================================
@@ -23,6 +24,8 @@ const NAV_LINKS = [
 ];
 
 export function Hero() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
       {/* Fixed glassmorphic header */}
@@ -42,6 +45,33 @@ export function Hero() {
                 key={link.label}
                 href={link.href}
                 className={link.active ? styles.hrLinkActive : styles.hrLink}
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+
+          {/* Hamburger Icon */}
+          <button 
+            className={styles.hamburgerBtn}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            <div className={`${styles.hamburgerLine} ${menuOpen ? styles.line1Open : ""}`} />
+            <div className={`${styles.hamburgerLine} ${menuOpen ? styles.line2Open : ""}`} />
+            <div className={`${styles.hamburgerLine} ${menuOpen ? styles.line3Open : ""}`} />
+          </button>
+        </div>
+
+        {/* Mobile Menu Drawer */}
+        <div className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ""}`}>
+          <nav className={styles.mobileNav}>
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className={link.active ? styles.mobileLinkActive : styles.mobileLink}
+                onClick={() => setMenuOpen(false)}
               >
                 {link.label}
               </a>

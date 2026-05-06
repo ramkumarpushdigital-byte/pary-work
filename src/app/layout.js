@@ -12,6 +12,12 @@ export const metadata = {
     "Parylene delivers ultra-thin, conformal coating technology that protects critical components across industries — from electronics to medical devices.",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={geistSans.variable}>
