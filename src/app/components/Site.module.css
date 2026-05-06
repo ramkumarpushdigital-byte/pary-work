@@ -2,12 +2,10 @@
    HERO
    ==================================================== */
 .hrHero {
-  background: url(/images/hero-bg.png) center / cover no-repeat;
+  position: relative;
   width: 100%;
-  /* padding-top: 210px; */
   overflow: hidden;
   height: 100vh;
-  /* space for fixed header */
 }
 
 .hrTopBar {
@@ -24,12 +22,11 @@
 }
 
 .hrTopBarInner {
-  align-items: center;
-  gap: 50px;
-  /* max-width: 1400px; */
-  margin: 0 auto;
-  padding: 8px 250px;
-  display: flex;
+ align-items: center;
+    gap: 98px;
+    margin: 0 auto;
+    padding: 4px 200px;
+    display: flex;
 }
 
 .hrLogoLink {
@@ -48,7 +45,7 @@
   border: 1px solid #ffffff80;
   border-radius: 60px;
   align-items: center;
-  gap: 80px;
+  gap: 96px;
   padding: 16px 41px;
   display: flex;
 }
@@ -173,7 +170,7 @@
 
 .abInner {
   align-items: center;
-  gap: 182px;
+  gap: 375px;
   /* max-width: 1400px; */
   margin: 0 auto;
   padding: 94px 100px 80px;
@@ -205,8 +202,8 @@
 
 .abBody {
   color: var(--color-text-muted);
-  font-size: 18px;
-  line-height: 1.95;
+  font-size: 19px;
+    line-height: 2;
 }
 
 .abImageWrap {
@@ -215,8 +212,8 @@
 }
 
 .abImage {
-  width: 100%;
-  max-width: 478px;
+  width: 112%;
+  max-width: 472px;
   height: auto;
   aspect-ratio: 478 / 452;
   object-fit: cover;
@@ -238,11 +235,22 @@
   height: 100vh;
   min-height: 100vh;
   display: flex;
+  position: relative;
+    z-index: 0;
+}
+.whatispary_bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: -10;
 }
 
 .wpInner {
   align-items: flex-start;
-  gap: 205px;
+  gap: 311px;
   /* max-width: 1400px; */
   margin: 0 auto;
   padding: 90px 155px 80px;
@@ -328,7 +336,7 @@
   background: white;
   box-shadow: 0 0 17px -7px;
   border-radius: 40px;
-  padding: 40px;
+     padding: 20px 60px;
 }
 
 .wpRightTitle {
@@ -388,7 +396,7 @@
 .apSection {
   position: relative;
   width: 100%;
-  background: #fff;
+  background: #F2FDFC;
 }
 
 .apHeader {
@@ -428,7 +436,7 @@
   gap: 55px;
   /* max-width: 1641px; */
   margin: 0 auto;
-  padding: 0px 83px 79px;
+  padding: 0px 221px 78px;
   display: grid;
 }
 
@@ -444,7 +452,7 @@
 
 .apCard:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(30, 122, 62, 0.1);
+  box-shadow: 0 12px 32px rgba(46, 48, 47, 0.1);
 }
 
 .apCardImageWrap {
@@ -501,7 +509,7 @@
 .apCardArrow {
   width: 36px;
   height: 36px;
-  border-radius: 10px;
+  border-radius: 50%;
   border: 1.5px solid var(--color-border);
   background: #fff;
   display: flex;
@@ -513,8 +521,7 @@
 }
 
 .apCard:hover .apCardArrow {
-  background: var(--color-primary);
-  border-color: var(--color-primary);
+  translate: 2px;
   color: #fff;
 }
 
@@ -544,16 +551,16 @@
 }
 
 .wcInner {
-  position: relative;
-  z-index: 1;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 100px 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  min-height: 620px;
+ z-index: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    max-width: 1400px;
+    min-height: 620px;
+    margin: 0 auto;
+    padding: 182px 60px;
+    display: flex;
+    position: relative;
 }
 
 /* ---- COLUMNS ---- */
@@ -578,6 +585,7 @@
   display: flex;
   align-items: center;
   gap: 14px;
+  width: 265px;
 }
 
 .wcBadgeLeft {
@@ -614,11 +622,11 @@
 
 /* ---- LABEL ---- */
 .wcBadgeLabel {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.35;
   color: var(--color-text);
-  max-width: 170px;
+  max-width: 180px;
 }
 
 /* ---- CONNECTOR DOT IMAGE ---- */
@@ -630,46 +638,38 @@
   pointer-events: none;
 }
 
-/* ---- LEFT COLUMN RADIAL OFFSETS (1–5) ---- */
+/* ---- LEFT COLUMN RADIAL OFFSETS (1–4) ---- */
 .wcColLeft>*:nth-child(1) {
-  transform: translateX(41px);
+  transform: translateX(42px) translateY(-75px);
 }
 
 .wcColLeft>*:nth-child(2) {
-  transform: translateX(0px);
+  transform: translateX(10px) translateY(-20px);
 }
 
 .wcColLeft>*:nth-child(3) {
-  transform: translateX(0px);
+  transform: translateX(10px) translateY(20px);
 }
 
 .wcColLeft>*:nth-child(4) {
-  transform: translateX(36px);
+  transform: translateX(42px) translateY(75px);
 }
 
-.wcColLeft>*:nth-child(5) {
-  transform: translateX(-60px);
-}
-
-/* ---- RIGHT COLUMN RADIAL OFFSETS (1–5) ---- */
+/* ---- RIGHT COLUMN RADIAL OFFSETS (1–4) ---- */
 .wcColRight>*:nth-child(1) {
-  transform: translateX(-50px);
+  transform: translateX(-42px) translateY(-75px);
 }
 
 .wcColRight>*:nth-child(2) {
-  transform: translateX(-11px);
+  transform: translateX(-10px) translateY(-20px);
 }
 
 .wcColRight>*:nth-child(3) {
-  transform: translateX(-5px);
+  transform: translateX(-10px) translateY(20px);
 }
 
 .wcColRight>*:nth-child(4) {
-  transform: translateX(-37px);
-}
-
-.wcColRight>*:nth-child(5) {
-  transform: translateX(55px);
+  transform: translateX(-42px) translateY(75px);
 }
 
 /* ---- CENTER ---- */
@@ -679,8 +679,8 @@
 }
 
 .wcCenterCircle {
-  width: 420px;
-  height: 420px;
+  width: 490px;
+  height: 491px;
   position: relative;
   display: flex;
   align-items: center;
@@ -689,9 +689,11 @@
 
 .wcCenterImg {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 126%;
+  height: 126%;
   object-fit: contain;
   pointer-events: none;
 }
@@ -760,6 +762,9 @@
   font-size: 44px;
   font-weight: 700;
   color: var(--color-text);
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #01363b 0%, #0d803a 86%);
+  -webkit-background-clip: text;
 }
 
 .adCardGrid {
@@ -768,7 +773,7 @@
   gap: 101px;
   /* max-width: 1400px; */
   margin: 0 auto;
-  padding: 32px 265px 103px;
+ padding: 32px 221px 103px;
   display: flex;
   position: relative;
 }
@@ -936,15 +941,18 @@
   font-size: 44px;
   font-weight: 700;
   color: var(--color-text);
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #01363b 0%, #0d803a 86%);
+  -webkit-background-clip: text;
 }
 
 .prContent {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 100px 80px;
-  display: flex;
-  gap: 60px;
-  align-items: center;
+     align-items: center;
+    gap: 180px;
+    max-width: 1481px;
+    margin: 0 auto;
+    padding: 2px -1px 80px;
+    display: flex;
 }
 
 .prSteps {
@@ -955,7 +963,7 @@
 
 .prConnector {
   position: absolute;
-  left: 37px;
+    left: 143px;
   top: 50px;
   bottom: 50px;
   width: 3px;
@@ -1089,17 +1097,20 @@
   font-size: 44px;
   font-weight: 700;
   color: var(--color-text);
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #01363b 0%, #0d803a 86%);
+  -webkit-background-clip: text;
 }
 
 .fcGallery {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 100px 80px;
-  display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 13px;
-  height: 522px;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 16px;
+    max-width: 1473px;
+    height: 630px;
+    margin: 0 auto;
+    padding: 0px 13px 80px;
+    display: grid;
 }
 
 .fcGalleryMain {
@@ -1170,12 +1181,15 @@
   font-size: 44px;
   font-weight: 700;
   color: var(--color-text);
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #01363b 0%, #0d803a 86%);
+  -webkit-background-clip: text;
 }
 
 .ccTableWrap {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 100px 80px;
+ max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 0px 80px
 }
 
 .ccTable {
@@ -1342,16 +1356,19 @@
   font-size: 44px;
   font-weight: 700;
   color: var(--color-text);
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #01363b 0%, #0d803a 86%);
+  -webkit-background-clip: text;
 }
 
 .inRow {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 80px 80px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 24px;
+ justify-content: center;
+    align-items: flex-start;
+    gap: 75px;
+    max-width: 1509px;
+    margin: 0 auto;
+    padding: 0 7px 80px;
+    display: flex;
 }
 
 .inCard {
@@ -1404,14 +1421,14 @@ background: linear-gradient(to top, #26876438 0%, #F2FCFC 100%);
 }
 
 .ctBanner {
-  max-width: 1200px;
-  margin: 0 auto;
-  height: 300px;
-  border-radius: 24px;
-  overflow: hidden;
-  background: linear-gradient(105deg, #1a3ee8 0%, #2556f0 30%, #1a8cd8 55%, #15b358 80%, #2ecb2e 100%);
-  display: flex;
-  position: relative;
+ background: linear-gradient(105deg, #1a3ee8 -1%, #2556f0 20%, #1a8cd8 48%, #15b358 86%, #2ecb2e 100%);
+    border-radius: 24px;
+    max-width: 1500px;
+    height: 375px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    overflow: hidden;
 }
 
 .ctContent {
@@ -1498,9 +1515,9 @@ background: linear-gradient(to top, #26876438 0%, #F2FCFC 100%);
 }
 
 .frInner {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 60px 100px 0;
+ max-width: 1680px;
+    margin: 0 auto;
+    padding: 60px 96px 0
 }
 
 .frHeader {
@@ -1521,6 +1538,9 @@ background: linear-gradient(to top, #26876438 0%, #F2FCFC 100%);
   font-size: 40px;
   font-weight: 700;
   color: var(--color-text);
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #01363b 0%, #0d803a 86%);
+  -webkit-background-clip: text;
 }
 
 .frAddresses {
@@ -1691,15 +1711,15 @@ background: linear-gradient(to top, #26876438 0%, #F2FCFC 100%);
 
 /* ---- COPYRIGHT BAR ---- */
 .frCopy {
-  background: #1a7a3a;
-  margin: 0 -100px;
-  padding: 16px 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.85);
+color: #ffffffd9;
+    background: #1a7a3a;
+    justify-content: center;
+    align-items: center;
+    gap: 53px;
+    margin: 0px -7px;
+    padding: 16px 60px;
+    font-size: 12px;
+    display: flex;
 }
 
 .frCopy a {
@@ -1717,4 +1737,481 @@ background: linear-gradient(to top, #26876438 0%, #F2FCFC 100%);
 
 .frCopyRight {
   margin-left: 30px;
+}
+
+/* ====================================================
+   LAPTOP BREAKPOINT (1024px – 1800px)
+   ==================================================== */
+@media (min-width: 1024px) and (max-width: 1800px) {
+
+  /* ---- HERO ---- */
+  .hrTopBarInner {
+    padding: 3px 130  1px;
+    gap: 33px;
+  }
+
+  .hrPill {
+    gap: 88px;
+    padding: 14px 25px;
+  }
+
+  .hrLink,
+  .hrLinkActive {
+    font-size: 13px;
+  }
+
+  .hrLogo {
+    width: 90px;
+    height: 64px;
+  }
+
+  .hrCopy {
+    margin: 200px auto 0;
+  }
+
+  .hrH1 {
+    font-size: 40px;
+  }
+
+  .hrSub {
+    font-size: 15px;
+    max-width: 560px;
+  }
+
+  .hrBtnFill,
+  .hrBtnOutline {
+    height: 46px;
+    font-size: 14px;
+    padding: 0 28px;
+  }
+
+  /* ---- ABOUT ---- */
+  .abInner {
+    gap: 309px;
+    padding: 70px 60px 60px;
+  }
+
+  .abText {
+    width: 500px;
+  }
+
+  .abTitle {
+    font-size: 28px;
+  }
+
+  .abBody {
+    font-size: 18px;
+    line-height: 2.2;
+  }
+
+  .abImage {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* ---- WHAT IS PARYLENE ---- */
+  .wpInner {
+    gap: 265px;
+    padding: 70px 60px 60px;
+  }
+
+  .wpLeft {
+    width: 480px;
+  }
+
+  .wpTitle {
+    font-size: 34px;
+  }
+
+  .wpSubtitle {
+    font-size: 15px;
+  }
+
+  .wpBody {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .wpRight {
+    padding: 20px 63px;
+  }
+
+  .wpRightTitle {
+    font-size: 16px;
+    margin: 0 0 28px 0;
+  }
+
+  .wpReasons {
+    gap: 22px;
+  }
+
+  .wpReasonText h4 {
+    font-size: 14px;
+  }
+
+  .wpReasonText p {
+    font-size: 12px;
+    max-width: 280px;
+  }
+
+  /* ---- APPLICATION ---- */
+  .apHeader {
+    padding: 70px 60px 0;
+    margin-bottom: 40px;
+  }
+
+  .apTitle {
+    font-size: 38px;
+  }
+
+  .apGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 139px 60px;
+  }
+
+  .apCardImageWrap {
+    height: 200px;
+  }
+
+  .apCardTitle {
+    font-size: 14px;
+  }
+
+  .apCardSubtitle {
+    font-size: 12px;
+  }
+
+  /* ---- WHY CHOOSE PARYLENE (BENEFITS) ---- */
+  .wcInner {
+    padding: 70px 30px;
+    min-height: 500px;
+  }
+
+  .wcCol {
+    width: 220px;
+    gap: 36px;
+  }
+
+  .wcBadgeLabel {
+    font-size: 13px;
+    max-width: 150px;
+  }
+
+  .wcBadgeIconImg {
+    width: 36px;
+    height: 34px;
+  }
+
+  .wcDotImg {
+    width: 32px;
+  }
+
+  .wcColLeft>*:nth-child(1) {
+    transform: translateX(75px) translateY(-55px);
+  }
+  .wcColLeft>*:nth-child(2) {
+    transform: translateX(8px) translateY(-14px);
+  }
+  .wcColLeft>*:nth-child(3) {
+    transform: translateX(8px) translateY(14px);
+  }
+  .wcColLeft>*:nth-child(4) {
+    transform: translateX(75px) translateY(55px);
+  }
+
+  .wcColRight>*:nth-child(1) {
+    transform: translateX(-75px) translateY(-55px);
+  }
+  .wcColRight>*:nth-child(2) {
+    transform: translateX(-8px) translateY(-14px);
+  }
+  .wcColRight>*:nth-child(3) {
+    transform: translateX(-8px) translateY(14px);
+  }
+  .wcColRight>*:nth-child(4) {
+    transform: translateX(-75px) translateY(55px);
+  }
+
+  .wcCenter {
+    padding: 0 16px;
+  }
+
+  .wcCenterCircle {
+    width: 380px;
+    height: 381px;
+  }
+
+  .wcTitle {
+    font-size: 24px;
+  }
+
+  .wcEyebrow {
+    font-size: 10px;
+  }
+
+  /* ---- ADVANTAGES ---- */
+  .adHeader {
+    padding: 70px 60px 0;
+    margin-bottom: 36px;
+  }
+
+  .adSectionTitle {
+    font-size: 38px;
+  }
+
+  .adCardGrid {
+    gap: 70px;
+    padding: 24px 155px 80px;
+  }
+
+  .adCard {
+    width: 600px;
+    padding: 20px 22px;
+  }
+
+  .adCardImage {
+    width: 96px;
+    height: 120px;
+    margin-right: 20px;
+  }
+
+  .adCardTitle {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .adList li {
+    font-size: 13px;
+  }
+
+  .card1,
+  .card2,
+  .card3,
+  .card4,
+  .card5 {
+    transform: translateY(-75px) translateX(-250px);
+  }
+
+  /* ---- PROCESS ---- */
+  .prHeader {
+    padding: 50px 60px 0;
+    margin-bottom: 40px;
+  }
+
+  .prTitle {
+    font-size: 38px;
+  }
+
+  .prContent {
+    gap: 105px;
+    max-width: 1300px;
+    padding: 2px 40px 60px;
+  }
+
+  .prSteps {
+    width: 440px;
+  }
+
+  .prConnector {
+    left: 135px;
+  }
+
+  .prIcon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .prStepBody h3 {
+    font-size: 16px;
+  }
+
+  .prStepBody p {
+    font-size: 12px;
+    max-width: 300px;
+  }
+
+  /* ---- FACILITY ---- */
+  .fcHeader {
+    padding: 50px 60px 0;
+    margin-bottom: 36px;
+  }
+
+  .fcTitle {
+    font-size: 38px;
+  }
+
+  .fcGallery {
+    max-width: 1300px;
+    height: 500px;
+    padding: 0 30px 60px;
+    gap: 12px;
+  }
+
+  /* ---- COMPARISON CHART ---- */
+  .ccHeader {
+    padding: 50px 60px 0;
+    margin-bottom: 36px;
+  }
+
+  .ccTitle {
+    font-size: 38px;
+  }
+
+  .ccTableWrap {
+    max-width: 1300px;
+    padding: 0 30px 60px;
+  }
+
+  .ccFactorHead {
+    font-size: 14px;
+    padding-left: 20px;
+  }
+
+  .ccFactorHead,
+  .ccHead,
+  .ccHeadBest {
+    padding: 20px 14px;
+    font-size: 11px;
+  }
+
+  .ccFactor,
+  .ccCell,
+  .ccCellBest {
+    font-size: 13px;
+    padding: 14px 14px;
+  }
+
+  .ccFactor {
+    padding-left: 20px;
+  }
+
+  .ccIndicator {
+    width: 24px;
+    height: 24px;
+  }
+
+  .ccPillGreen,
+  .ccPillBlue,
+  .ccPillYellow,
+  .ccPillRed {
+    padding: 4px 14px;
+    font-size: 12px;
+  }
+
+  /* ---- INDUSTRIES ---- */
+  .inHeader {
+    padding: 60px 60px 0;
+    margin-bottom: 40px;
+  }
+
+  .inTitle {
+    font-size: 38px;
+  }
+
+  .inRow {
+    gap: 40px;
+    max-width: 1300px;
+    padding: 0 30px 60px;
+  }
+
+  .inIconBox {
+    width: 100px;
+    height: 106px;
+  }
+
+  .inIconImg {
+    width: 130px;
+    height: 82px;
+  }
+
+  .inLabel {
+    font-size: 12px;
+  }
+
+  /* ---- CTA BANNER ---- */
+  .ctSection {
+    padding: 30px 30px 60px;
+  }
+
+  .ctBanner {
+    max-width: 1300px;
+    height: 350px;
+  }
+
+  .ctContent {
+    padding: 36px 44px;
+    width: 500px;
+  }
+
+  .ctTitle {
+    font-size: 30px;
+    margin-bottom: 14px;
+  }
+
+  .ctBody {
+    font-size: 12px;
+    max-width: 440px;
+    margin-bottom: 20px;
+  }
+
+  .ctImageWrap {
+    width: 460px;
+  }
+
+  /* ---- FOOTER ---- */
+  .frInner {
+    max-width: 1300px;
+    padding: 44px 50px 0;
+  }
+
+  .frTitle {
+    font-size: 34px;
+  }
+
+  .frAddresses {
+    gap: 30px;
+    margin-bottom: 32px;
+  }
+
+  .frAddressIcon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .frAddressIcon>img {
+    width: 44px;
+    height: 42px;
+  }
+
+  .frAddressName {
+    font-size: 13px;
+  }
+
+  .frAddressDesc {
+    font-size: 11.5px;
+  }
+
+  .frContactBar {
+    gap: 20px;
+    padding: 22px 0;
+  }
+
+  .frBrand {
+    width: 74px;
+  }
+
+  .frContactText a {
+    font-size: 12px;
+  }
+
+  .frContactLabel {
+    font-size: 10px;
+  }
+
+  .frCopy {
+    gap: 30px;
+    padding: 14px 40px;
+    font-size: 11px;
+  }
 }

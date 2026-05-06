@@ -50,9 +50,24 @@ export function Hero() {
         </div>
       </header>
 
-      {/* Hero section — no positioning, BG via CSS */}
+      {/* Hero section — BG via img element */}
       <section className={styles.hrHero} id="home">
-        <div className={styles.hrCopy}>
+        <img
+          src="/images/hero-bg.png"
+          alt=""
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+    inset: 0,
+    width: '100%',
+    height:  '100vh',
+    objectFit: 'cover',
+    objectPosition: 'bottom',
+    zIndex: 0,
+    pointerEvents: 'none',
+          }}
+        />
+        <div className={styles.hrCopy} style={{ position: "relative", zIndex: 1 }}>
           <h1 className={styles.hrH1}>
             Advanced Conformal <span className={styles.hrGreen}>Coating</span> Solutions for
             <br />
@@ -150,6 +165,7 @@ const REASONS = [
 export function WhatIsParylene() {
   return (
     <section className={styles.wpSection} id="what-is-parylene">
+      <img src="/images/whatispary-bg.png" className={styles.whatispary_bg} alt="" />
       <div className={styles.wpInner}>
         <div className={styles.wpLeft}>
           <span className={styles.wpEyebrow}>WHAT IS PARYLENE</span>
@@ -228,10 +244,7 @@ export function Application() {
                 <span className={styles.apCardSubtitle}>{app.subtitle}</span>
               </div>
               <div className={styles.apCardArrow}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="7" y1="17" x2="17" y2="7" />
-                  <polyline points="7 7 17 7 17 17" />
-                </svg>
+                <img src="/images/arrow.png" alt="" style={{width:"15px"}} />
               </div>
             </div>
           </div>
@@ -443,21 +456,25 @@ const STEPS = [
     n: 1,
     title: "Vaporization",
     desc: "Raw material is converted into vapor under controlled temperature",
+    path: "/images/process1.png"
   },
   {
     n: 2,
     title: "Pyrolysis",
     desc: "Vapor transforms into reactive monomers",
+    path: "/images/process2.png"
   },
   {
     n: 3,
     title: "Deposition",
     desc: "Monomers form a thin polymer layer on the surface in a vacuum",
+    path: "/images/process3.png"
   },
   {
     n: 4,
     title: "Cold Trap",
     desc: "Excess material is safely captured and disposed",
+    path: "/images/process4.png"
   },
 ];
 
@@ -481,6 +498,7 @@ export function Process() {
           <div className={styles.prConnector} aria-hidden="true" />
           {STEPS.map((s) => (
             <div key={s.n} className={styles.prStep}>
+              <div className={styles.init_img}> <img src={s.path} alt={s.title} /></div>
               <div className={styles.prIconWrap}>
                 <div className={styles.prIcon}>
                   <span className={styles.prNum}>{s.n}</span>
