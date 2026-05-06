@@ -1741,248 +1741,254 @@ color: #ffffffd9;
 
 /* ====================================================
    LAPTOP BREAKPOINT (1024px – 1800px)
+   All spacing uses vw units based on 1525px reference
+   so proportions stay identical at every viewport width.
    ==================================================== */
 @media (min-width: 1024px) and (max-width: 1800px) {
 
   /* ---- HERO ---- */
   .hrTopBarInner {
-    padding: 3px 130  1px;
-    gap: 33px;
+    padding: 3px 8.5vw 1px;
+    gap: 2.16vw;
   }
 
   .hrPill {
-    gap: 88px;
-    padding: 14px 25px;
+    gap: 5.77vw;
+    padding: 14px 1.64vw;
   }
 
   .hrLink,
   .hrLinkActive {
-    font-size: 13px;
+    font-size: 0.85vw;
   }
 
   .hrLogo {
-    width: 90px;
-    height: 64px;
+    width: 5.9vw;
+    height: 4.2vw;
   }
 
   .hrCopy {
-    margin: 200px auto 0;
+    margin: 13.1vw auto 0;
   }
 
   .hrH1 {
-    font-size: 40px;
+    font-size: 2.62vw;
   }
 
   .hrSub {
-    font-size: 15px;
-    max-width: 560px;
+    font-size: 0.98vw;
+    max-width: 36.7vw;
   }
 
   .hrBtnFill,
   .hrBtnOutline {
-    height: 46px;
-    font-size: 14px;
-    padding: 0 28px;
+    height: 3vw;
+    font-size: 0.92vw;
+    padding: 0 1.84vw;
   }
 
   /* ---- ABOUT ---- */
   .abInner {
-    gap: 309px;
-    padding: 70px 60px 60px;
+    gap: 20.26vw;
+    padding: 4.59vw 3.93vw 3.93vw;
   }
 
   .abText {
-    width: 500px;
+    width: 32.79vw;
   }
 
   .abTitle {
-    font-size: 28px;
+    font-size: 1.84vw;
   }
 
   .abBody {
-    font-size: 18px;
+    font-size: 1.18vw;
     line-height: 2.2;
   }
 
   .abImage {
     width: 100%;
-    max-width: 400px;
+    max-width: 26.23vw;
   }
 
   /* ---- WHAT IS PARYLENE ---- */
   .wpInner {
-    gap: 265px;
-    padding: 70px 60px 60px;
+    gap: 17.38vw;
+    padding: 4.59vw 3.93vw 3.93vw;
   }
 
   .wpLeft {
-    width: 480px;
+    width: 31.48vw;
   }
 
   .wpTitle {
-    font-size: 34px;
+    font-size: 2.23vw;
   }
 
   .wpSubtitle {
-    font-size: 15px;
+    font-size: 0.98vw;
   }
 
   .wpBody {
     width: 100%;
-    font-size: 15px;
+    font-size: 0.98vw;
   }
 
   .wpRight {
-    padding: 20px 63px;
+    padding: 1.31vw 4.13vw;
   }
 
   .wpRightTitle {
-    font-size: 16px;
-    margin: 0 0 28px 0;
+    font-size: 1.05vw;
+    margin: 0 0 1.84vw 0;
   }
 
   .wpReasons {
-    gap: 22px;
+    gap: 1.44vw;
   }
 
   .wpReasonText h4 {
-    font-size: 14px;
+    font-size: 0.92vw;
   }
 
   .wpReasonText p {
-    font-size: 12px;
-    max-width: 280px;
+    font-size: 0.79vw;
+    max-width: 18.36vw;
   }
 
   /* ---- APPLICATION ---- */
   .apHeader {
-    padding: 70px 60px 0;
-    margin-bottom: 40px;
+    padding: 4.59vw 3.93vw 0;
+    margin-bottom: 2.62vw;
   }
 
   .apTitle {
-    font-size: 38px;
+    font-size: 2.49vw;
   }
 
   .apGrid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    padding: 0 139px 60px;
+    gap: 1.97vw;
+    padding: 0 9.11vw 3.93vw;
   }
 
   .apCardImageWrap {
-    height: 200px;
+    height: 13.11vw;
   }
 
   .apCardTitle {
-    font-size: 14px;
+    font-size: 0.92vw;
   }
 
   .apCardSubtitle {
-    font-size: 12px;
+    font-size: 0.79vw;
   }
 
   /* ---- WHY CHOOSE PARYLENE (BENEFITS) ---- */
   .wcInner {
-    padding: 70px 30px;
-    min-height: 500px;
+    padding: 4.59vw 1.97vw;
+    min-height: 32.79vw;
   }
 
   .wcCol {
-    width: 220px;
-    gap: 36px;
+    width: 14.43vw;
+    gap: 2.36vw;
+  }
+
+  .wcBadge {
+    width: 17.38vw;
   }
 
   .wcBadgeLabel {
-    font-size: 13px;
-    max-width: 150px;
+    font-size: 0.85vw;
+    max-width: 9.84vw;
   }
 
   .wcBadgeIconImg {
-    width: 36px;
-    height: 34px;
+    width: 2.36vw;
+    height: 2.23vw;
   }
 
   .wcDotImg {
-    width: 32px;
+    width: 2.1vw;
   }
 
   .wcColLeft>*:nth-child(1) {
-    transform: translateX(75px) translateY(-55px);
+    transform: translateX(4.92vw) translateY(-3.61vw);
   }
   .wcColLeft>*:nth-child(2) {
-    transform: translateX(8px) translateY(-14px);
+    transform: translateX(0.52vw) translateY(-0.92vw);
   }
   .wcColLeft>*:nth-child(3) {
-    transform: translateX(8px) translateY(14px);
+    transform: translateX(0.52vw) translateY(0.92vw);
   }
   .wcColLeft>*:nth-child(4) {
-    transform: translateX(75px) translateY(55px);
+    transform: translateX(4.92vw) translateY(3.61vw);
   }
 
   .wcColRight>*:nth-child(1) {
-    transform: translateX(-75px) translateY(-55px);
+    transform: translateX(-4.92vw) translateY(-3.61vw);
   }
   .wcColRight>*:nth-child(2) {
-    transform: translateX(-8px) translateY(-14px);
+    transform: translateX(-0.52vw) translateY(-0.92vw);
   }
   .wcColRight>*:nth-child(3) {
-    transform: translateX(-8px) translateY(14px);
+    transform: translateX(-0.52vw) translateY(0.92vw);
   }
   .wcColRight>*:nth-child(4) {
-    transform: translateX(-75px) translateY(55px);
+    transform: translateX(-4.92vw) translateY(3.61vw);
   }
 
   .wcCenter {
-    padding: 0 16px;
+    padding: 0 1.05vw;
   }
 
   .wcCenterCircle {
-    width: 380px;
-    height: 381px;
+    width: 24.92vw;
+    height: 24.98vw;
   }
 
   .wcTitle {
-    font-size: 24px;
+    font-size: 1.57vw;
   }
 
   .wcEyebrow {
-    font-size: 10px;
+    font-size: 0.66vw;
   }
 
   /* ---- ADVANTAGES ---- */
   .adHeader {
-    padding: 70px 60px 0;
-    margin-bottom: 36px;
+    padding: 4.59vw 3.93vw 0;
+    margin-bottom: 2.36vw;
   }
 
   .adSectionTitle {
-    font-size: 38px;
+    font-size: 2.49vw;
   }
 
   .adCardGrid {
-    gap: 70px;
-    padding: 24px 155px 80px;
+    gap: 4.59vw;
+    padding: 1.57vw 10.16vw 5.25vw;
   }
 
   .adCard {
-    width: 600px;
-    padding: 20px 22px;
+    width: 39.34vw;
+    padding: 1.31vw 1.44vw;
   }
 
   .adCardImage {
-    width: 96px;
-    height: 120px;
-    margin-right: 20px;
+    width: 6.3vw;
+    height: 7.87vw;
+    margin-right: 1.31vw;
   }
 
   .adCardTitle {
-    font-size: 22px;
-    margin-bottom: 8px;
+    font-size: 1.44vw;
+    margin-bottom: 0.52vw;
   }
 
   .adList li {
-    font-size: 13px;
+    font-size: 0.85vw;
   }
 
   .card1,
@@ -1990,228 +1996,255 @@ color: #ffffffd9;
   .card3,
   .card4,
   .card5 {
-    transform: translateY(-75px) translateX(-250px);
+    transform: translateY(-4.92vw) translateX(-16.39vw);
   }
 
   /* ---- PROCESS ---- */
   .prHeader {
-    padding: 50px 60px 0;
-    margin-bottom: 40px;
+    padding: 3.28vw 3.93vw 0;
+    margin-bottom: 2.62vw;
   }
 
   .prTitle {
-    font-size: 38px;
+    font-size: 2.49vw;
   }
 
   .prContent {
-    gap: 105px;
-    max-width: 1300px;
-    padding: 2px 40px 60px;
+    gap: 6.89vw;
+    max-width: 85.25vw;
+    padding: 0.13vw 2.62vw 3.93vw;
   }
 
   .prSteps {
-    width: 440px;
+    width: 28.85vw;
   }
 
   .prConnector {
-    left: 135px;
+    left: 8.85vw;
   }
 
   .prIcon {
-    width: 60px;
-    height: 60px;
+    width: 3.93vw;
+    height: 3.93vw;
   }
 
   .prStepBody h3 {
-    font-size: 16px;
+    font-size: 1.05vw;
   }
 
   .prStepBody p {
-    font-size: 12px;
-    max-width: 300px;
+    font-size: 0.79vw;
+    max-width: 19.67vw;
   }
 
   /* ---- FACILITY ---- */
   .fcHeader {
-    padding: 50px 60px 0;
-    margin-bottom: 36px;
+    padding: 3.28vw 3.93vw 0;
+    margin-bottom: 2.36vw;
   }
 
   .fcTitle {
-    font-size: 38px;
+    font-size: 2.49vw;
   }
 
   .fcGallery {
-    max-width: 1300px;
-    height: 500px;
-    padding: 0 30px 60px;
-    gap: 12px;
+    max-width: 85.25vw;
+    height: 32.79vw;
+    padding: 0 1.97vw 3.93vw;
+    gap: 0.79vw;
   }
 
   /* ---- COMPARISON CHART ---- */
   .ccHeader {
-    padding: 50px 60px 0;
-    margin-bottom: 36px;
+    padding: 3.28vw 3.93vw 0;
+    margin-bottom: 2.36vw;
   }
 
   .ccTitle {
-    font-size: 38px;
+    font-size: 2.49vw;
   }
 
   .ccTableWrap {
-    max-width: 1300px;
-    padding: 0 30px 60px;
+    max-width: 85.25vw;
+    padding: 0 1.97vw 3.93vw;
   }
 
   .ccFactorHead {
-    font-size: 14px;
-    padding-left: 20px;
+    font-size: 0.92vw;
+    padding-left: 1.31vw;
   }
 
   .ccFactorHead,
   .ccHead,
   .ccHeadBest {
-    padding: 20px 14px;
-    font-size: 11px;
+    padding: 1.31vw 0.92vw;
+    font-size: 0.72vw;
   }
 
   .ccFactor,
   .ccCell,
   .ccCellBest {
-    font-size: 13px;
-    padding: 14px 14px;
+    font-size: 0.85vw;
+    padding: 0.92vw 0.92vw;
   }
 
   .ccFactor {
-    padding-left: 20px;
+    padding-left: 1.31vw;
   }
 
   .ccIndicator {
-    width: 24px;
-    height: 24px;
+    width: 1.57vw;
+    height: 1.57vw;
   }
 
   .ccPillGreen,
   .ccPillBlue,
   .ccPillYellow,
   .ccPillRed {
-    padding: 4px 14px;
-    font-size: 12px;
+    padding: 0.26vw 0.92vw;
+    font-size: 0.79vw;
   }
 
   /* ---- INDUSTRIES ---- */
   .inHeader {
-    padding: 60px 60px 0;
-    margin-bottom: 40px;
+    padding: 3.93vw 3.93vw 0;
+    margin-bottom: 2.62vw;
   }
 
   .inTitle {
-    font-size: 38px;
+    font-size: 2.49vw;
   }
 
   .inRow {
-    gap: 40px;
-    max-width: 1300px;
-    padding: 0 30px 60px;
+    gap: 2.62vw;
+    max-width: 85.25vw;
+    padding: 0 1.97vw 3.93vw;
   }
 
   .inIconBox {
-    width: 100px;
-    height: 106px;
+    width: 6.56vw;
+    height: 6.95vw;
   }
 
   .inIconImg {
-    width: 130px;
-    height: 82px;
+    width: 8.52vw;
+    height: 5.38vw;
   }
 
   .inLabel {
-    font-size: 12px;
+    font-size: 0.79vw;
   }
 
   /* ---- CTA BANNER ---- */
   .ctSection {
-    padding: 30px 30px 60px;
+    padding: 1.97vw 1.97vw 3.93vw;
   }
 
   .ctBanner {
-    max-width: 1300px;
-    height: 350px;
+    max-width: 85.25vw;
+    height: 22.95vw;
   }
 
   .ctContent {
-    padding: 36px 44px;
-    width: 500px;
+    padding: 2.36vw 2.89vw;
+    width: 32.79vw;
   }
 
   .ctTitle {
-    font-size: 30px;
-    margin-bottom: 14px;
+    font-size: 1.97vw;
+    margin-bottom: 0.92vw;
   }
 
   .ctBody {
-    font-size: 12px;
-    max-width: 440px;
-    margin-bottom: 20px;
+    font-size: 0.79vw;
+    max-width: 28.85vw;
+    margin-bottom: 1.31vw;
   }
 
   .ctImageWrap {
-    width: 460px;
+    width: 30.16vw;
   }
 
   /* ---- FOOTER ---- */
   .frInner {
-    max-width: 1300px;
-    padding: 44px 50px 0;
+    max-width: 85.25vw;
+    padding: 2.89vw 3.28vw 0;
   }
 
   .frTitle {
-    font-size: 34px;
+    font-size: 2.23vw;
   }
 
   .frAddresses {
-    gap: 30px;
-    margin-bottom: 32px;
+    gap: 1.97vw;
+    margin-bottom: 2.1vw;
   }
 
   .frAddressIcon {
-    width: 52px;
-    height: 52px;
+    width: 3.41vw;
+    height: 3.41vw;
   }
 
   .frAddressIcon>img {
-    width: 44px;
-    height: 42px;
+    width: 2.89vw;
+    height: 2.75vw;
   }
 
   .frAddressName {
-    font-size: 13px;
+    font-size: 0.85vw;
   }
 
   .frAddressDesc {
-    font-size: 11.5px;
+    font-size: 0.75vw;
   }
 
   .frContactBar {
-    gap: 20px;
-    padding: 22px 0;
+    gap: 1.31vw;
+    padding: 1.44vw 0;
   }
 
   .frBrand {
-    width: 74px;
+    width: 4.85vw;
   }
 
   .frContactText a {
-    font-size: 12px;
+    font-size: 0.79vw;
   }
 
   .frContactLabel {
-    font-size: 10px;
+    font-size: 0.66vw;
   }
 
   .frCopy {
-    gap: 30px;
-    padding: 14px 40px;
-    font-size: 11px;
+    gap: 1.97vw;
+    padding: 0.92vw 2.62vw;
+    font-size: 0.72vw;
+  }
+}
+
+/* ====================================================
+   NARROW LAPTOP OVERRIDE (1024px – 1280px)
+   Tighter nav & hero for smaller laptops
+   ==================================================== */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .hrTopBarInner {
+    padding: 2px 1.5vw 1px;
+    gap: 0.8vw;
+  }
+
+  .hrPill {
+    gap: 0.8vw;
+    padding: 10px 1vw;
+    flex-wrap: nowrap;
+  }
+
+  .hrLink,
+  .hrLinkActive {
+    font-size: 0.72vw;
+  }
+
+  .hrLogo {
+    width: 5vw;
+    height: 3.5vw;
   }
 }
