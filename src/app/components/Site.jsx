@@ -6,7 +6,17 @@ import styles from "./Site.module.css";
    SHARED BG WRAPPER (Benefits + Advantages + Process)
    ==================================================== */
 export function SectionsBgWrap({ children }) {
-  return <div className={styles.sectionsBgWrap}>{children}</div>;
+  return (
+    <div className={styles.sectionsBgWrap}>
+      <img
+        src="/images/pary-big-bg.png"
+        alt=""
+        aria-hidden="true"
+        className={styles.sectionsBgImg}
+      />
+      {children}
+    </div>
+  );
 }
 
 /* ====================================================
@@ -313,12 +323,12 @@ export function WhyChooseParylene() {
             <div key={b.label} className={`${styles.wcBadge} ${styles.wcBadgeLeft}`}>
               <span className={styles.wcBadgeLabel}>{b.label}</span>
               <div className={styles.wcBadgeIcon}>
-                <img src={b.icon} alt={b.label} className={styles.wcBadgeIconImg} />
+                <img src={b.icon} alt={b.label}  className={`${styles.wcBadgeIconImg}`} />
               </div>
               <img
                 src={`/images/left-dot${i + 1}.png`}
                 alt=""
-                className={styles.wcDotImg}
+                className={`${styles.wcDotImg}  ${styles[`l_img${i + 1}`]}`}
                 aria-hidden="true"
               />
             </div>
@@ -347,11 +357,11 @@ export function WhyChooseParylene() {
               <img
                 src={`/images/right-dot${i + 1}.png`}
                 alt=""
-                className={styles.wcDotImg}
+                className={styles.wcDotImg + " " + styles[`R_img${i + 1}`]}
                 aria-hidden="true"
               />
               <div className={styles.wcBadgeIcon}>
-                <img src={b.icon} alt={b.label} className={styles.wcBadgeIconImg} />
+                <img src={b.icon} alt={b.label} className={`${styles.wcBadgeIconImg} `} />
               </div>
               <span className={styles.wcBadgeLabel}>{b.label}</span>
             </div>
